@@ -3,13 +3,13 @@
 # El codigo es de mi autoria completa
 
 # Analisis:
+#
 # El algoritmo utiliza una cola de prioridad donde se guardan los registros de
 # de entrada. La creacion de una cola de prioridad desde un arreglo es O(n).
 # Retirar o ingresar un elemento a la vez a la cola es O(log n). Luego se deben
 # obtener k consultas de la cola y por cada consulta se debe retirar un 
-# elemento y luego agregar otro. Finalmente esto seria O(2*k*log n) + O(n),
-# por lo que dependiendo se si k es mayor que n el algoritmo estara dominado
-# por O(k*log n) o por O(n).
+# elemento y luego agregar otro. Finalmente esto estaria acotado por
+# O(k*log n) + O(n).
 # 
 # En el caso de la memoria se necesita O(n) elementos para representar las 
 # prioridades en la cola además del id de la consulta y el periodo. Por lo que

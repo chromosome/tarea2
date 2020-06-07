@@ -2,7 +2,8 @@
 # Online Judge ID: 	1144931
 # El codigo es de mi autoria completa
 
-# Anlisis:
+# Analisis:
+#
 # Para cada caso al momento de leer los cursos estos se ordenan. Como cada 
 # entrada tiene 5 cursos se tiene un costo de O(5*log 5) operaciones y como se 
 # leen n entradas entonces el costo esta dominado por O(n). Agregar las tuplas

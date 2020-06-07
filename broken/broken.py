@@ -3,6 +3,7 @@
 # El codigo es de mi autoria completa
 
 # Analisis:
+#
 # El algoritmo necesita un contenedor con n caracteres en total, donde n es la 
 # cantidad de caracteres en una linea por lo que la memoria estara dominada por 
 # O(n).
@@ -12,7 +13,7 @@
 # beiju por lo que deben capturarse todos los caracteres luego agregarlos al 
 # principio de la cola y luego unir todos los elementos. Esto tomaria O(n)
 # ingresos. La union de strings esta dada por O(n+m) para strings de distinto 
-# tamaño, pero como se tendrian n strings de un caracter el costo final sería 
+# tamano, pero como se tendrian n strings de un caracter el costo final sería 
 # O(n). Finalmente en el peor caso el tiempo estaria dominado por O(n).
 
 import sys
@@ -20,6 +21,7 @@ from collections import deque
 
 # Se lee una linea de la entrada
 for line in sys.stdin:
+	
 	# Cola para el texto final
 	dq = deque()
 

@@ -4,43 +4,40 @@
 
 # Analisis:
 # 
+# Se debe iterar sobre n entradas por lo que el caso base es O(n) en tiempo.
+# Para cada participante se guarda cada uno de sus problemas, así que a lo mas
+# se ocupara un diccionario con p participantes y m problemas para cada uno.
+# Obtener la suma de tiempos de penalizacion y de problemas resueltos requiere 
+# iterar sobre los diccionarios de problema de cada participante dos veces y 
+# seria O(2*p*m). Luego obtener el ranking de participantes ordenado requiere
+# O(p*log p) operaciones por el peor caso de Tim Sort ocupado en python. 
+# Finalmente se trendria O(n) + O(p*m) + O(p*log p) para la complejidad 
+# temporal de cada caso en el peor de los casos.
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+# Para el espacio a lo mas se almacenan m problemas para p participantes por lo
+# que tomaria O(p*m) + O(n) elementos. Esto puede reducirse a O(p*m) si se leen
+# las entradas de los casos de una a la vez.
 
 import sys
 from functools import cmp_to_key
 
 # Funcion para comparar concursantes
 def cont_compare(a, b):
-	# Comparacion por problemas resueltos
+
+	# Por problemas resueltos
 	if a[1][0] > b[1][0]:
 		return -1
 	elif a[1][0] < b[1][0]:
 		return 1
 	else:
+
 		# Por tiempo de penalizacion acumulado
 		if a[1][1] < b[1][1]:
 			return -1
 		elif a[1][1] > b[1][1]:
 			return 1
 		else:
+
 			# Por numero de equipo
 			if a[0] < b[0]:
 				return -1

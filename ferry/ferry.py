@@ -4,25 +4,16 @@
 
 # Analisis:
 # 
+# Para el espacio, cada elemento que sale de la cola de eventos es ingresado a 
+# la cola correspondiente a su lado, por lo que nunca se necesitan mas de n 
+# elementos y su complejidad seria O(n).
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+# Para el tiempo, en el peor caso el ferry debe llenar de un auto cada vez que 
+# viaja por lo que cada viaje le toma retirar O(1) operacion de las colas
+# correspondientes, por lo que para todos los viajes tendria O(n) operaciones.
+# Finalmente se ordena la cola final con respecto al numero del evento con el
+# que se ingresa a la cola de eventos. Finalmente se tendrian O(n) + O(n*log n)
+# operaciones lo que esta acotado solo por O(n*log n).
 
 import sys
 from collections import deque, namedtuple

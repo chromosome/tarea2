@@ -2,17 +2,17 @@
 # Online Judge ID: 	1144931
 # El codigo es de mi autoria completa
 
-# Analisis
+# Analisis:
 # 
+# El peor caso se tiene cuando el orden de los vagones esta completamente 
+# invertido por lo que utilizando una pila se tomara 2*n-1 operaciones. 
+# Considerando que ingresar y retirar de la cola o la pila tiene coste O(1)
+# se tiene que la complejidad para el tiempo esta dominada por O(n).
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
+# En espacio se utiliza una cola ordenada del mismo tamano del arreglo de 
+# entrada y una pila que se llena con los elementos que se retiran de la cola
+# por lo que se necesitan a lo mas 2*n elementos y su complejidad esta acotada
+# por O(n).
 
 import sys
 from collections import deque
