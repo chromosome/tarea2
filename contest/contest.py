@@ -15,8 +15,8 @@
 # temporal de cada caso en el peor de los casos.
 # 
 # Para el espacio a lo mas se almacenan m problemas para p participantes por lo
-# que tomaria O(p*m) + O(n) elementos. Esto puede reducirse a O(p*m) si se leen
-# las entradas de los casos de una a la vez.
+# que tomaria O(p*m) + O(n) elementos. Esto puede reducirse a O(p*m) si se 
+# procesan las entradas de los casos de una a la vez.
 
 import sys
 from functools import cmp_to_key
@@ -103,10 +103,10 @@ for case in cases:
 				if p[n][1] =='C':
 					continue
 
-				# Si las entradas del problema no han sido incorrectas, y el 
-				# problema fue respondido incorrectamente, se toma el tiempo
-				# de penalizacion base y se actualiza el estado del problema
-				# a incorrecto
+				# Si las entradas del problema no han sido incorrectas o 
+				# correctas, y el problema fue respondido incorrectamente, se 
+				# toma el tiempo de penalizacion base y se actualiza el estado 
+				# del problema a incorrecto
 				elif p[n][1] != 'I' and l == 'I':
 					p[n][0] = 20
 					p[n][1] = 'I'

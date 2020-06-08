@@ -7,9 +7,9 @@
 # Como los lemmings estan en una cola de prioridad, ingresarlos a la batalla 
 # cuesta O(log n) e ingresarlos a la cola de nuevo cuesta O(log n). A cada 
 # batalla ingresan dos lemmings y solo uno vuelve a su respectiva cola, y como 
-# el round ejecuta b batallas se tiene una complejiad dominada por b*O(log b) 
+# el round ejecuta b batallas se tiene una complejiad acotada por b*O(log b) 
 # para cada round. Finalmente como se ejecutan a lo mas (sg+sb)/b rounds
-# se tiene finalmente que la complejidad es de O((sg+sb)*log b) operaciones.
+# se tiene que la complejidad es de O((sg+sb)*log b) operaciones.
 # 
 # A lo mas se tiene sg+sb lemmings por lo que la complejidad esta acotada por
 # O(sg+sb).
@@ -55,7 +55,7 @@ for line in sys.stdin:
 
 # Para cada caso
 for case in cases:
-	
+
 	# Obtiene los campos de batalla y las listas de los lemmings
 	b, qg, qb = case[0], case[1], case[2]
 
@@ -70,8 +70,7 @@ for case in cases:
 		# Lista de ganadores
 		winners = []
 
-		# Comienza un round. Ingresan los lemmings a los campos 
-		# de batalla
+		# Comienza un round. Ingresan los lemmings a los campos de batalla
 		for _ in range(b):
 
 			# Si hay lemmings en las colas
